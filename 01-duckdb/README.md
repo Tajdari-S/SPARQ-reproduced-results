@@ -157,6 +157,9 @@ with evidence. The two most likely to catch you:
 | `run_joins.sh`, `perf_join_bench.sh` | star joins, Figures 7 and 10 |
 | `run_benchmark_cols.sh` | self-join, DISTINCT and WHERE per column, Figures 8 and 9 |
 | `advisor.sh`, `advisor2.sh` | Intel Advisor drivers, Figure 2 |
+| `SF100Setup.sh` | builds the SF100 databases |
+| `DuckDBVtuneData.sh` | database setup used for profiling runs |
+| `RooflineParameters.sh` | theoretical peak from lscpu, Figure 2 |
 
 `scripts/` holds the harnesses used for the re-measurement here. They run the
 same queries; the differences are that the database is on local disk, each cold

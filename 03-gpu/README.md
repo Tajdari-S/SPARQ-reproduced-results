@@ -121,6 +121,8 @@ therefore left untouched in the figures.
 | `BestGPU.py` | the harness behind Figure 10's GPU bars |
 | `BestGPUReport.py` | reporting variant |
 | `FinalJoin.py`, `NewFinalJoin.py`, `join_VF.py` | earlier iterations |
+| `GPUJOIN.py` | GPU join measurement and plotting |
+| `GPUJOINSEPPEDUP.py` | GPU speedup plotting |
 
 `scripts/gpu_join_bench.py` runs the same `merge`, differing only in where the
 timer starts and in using plain cuDF rather than dask-cuDF. Set `INCLUDE_LOAD=1`

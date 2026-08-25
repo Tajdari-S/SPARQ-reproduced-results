@@ -157,6 +157,8 @@ Writes one trace per `lineorder` column (C0–C4) per scale factor.
 | `sensitivity.sh` | the tCMP / tCCD sweep |
 | `dictionary.py` | dictionary encoding of the join keys |
 | `setuplatencycalculation.cpp` | hash build and duplication lists, Table 2 |
+| `run_dramsim_sweep.sh` | batch DRAMsim3 over all traces (repo-root `run.sh`) |
+| `Sensitivity.sh` | tCCD/tCMP sensitivity sweep |
 
 `reproduce.sh` here does what `run.sh` does, with the working directory and the
 `CMD_TRACE` build requirement handled explicitly.
