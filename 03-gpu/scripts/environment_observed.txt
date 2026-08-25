@@ -1,0 +1,12 @@
+cuda-bindings                     11.8.6
+cuda-python                       11.8.6
+cudf-cu11                         25.2.2
+cupy-cuda11x                      13.4.0
+cupy-cuda12x                      13.4.0
+libcudf-cu11                      25.2.2
+numba                             0.60.0
+numba-cuda                        0.2.0
+pyarrow                           19.0.1
+pylibcudf-cu11                    25.2.2
+rmm-cu11                          25.2.0
+Python 3.12.9

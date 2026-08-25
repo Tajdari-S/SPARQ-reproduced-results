@@ -1,0 +1,4 @@
+sf,col,table,last_read_cycle,ns,plotted_ns,ratio
+1,C2,customer,971000,606875.0,743997.5,0.82
+1,C3,part,1574558,984098.8,1076788.75,0.91
+1,C4,supplier,849117,530698.1,968215,0.55

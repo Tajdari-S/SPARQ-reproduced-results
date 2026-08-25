@@ -1,0 +1,17 @@
+# SPARQ artifact - GPU baseline (Figure 10)
+#
+# Install with the NVIDIA index:
+#   pip install --extra-index-url=https://pypi.nvidia.com -r requirements-gpu.txt
+#
+# Pick the CUDA suffix matching your driver: -cu11 or -cu12.
+# Our host runs driver 580.159.04 (CUDA 13.0 capable) with the cu11 wheels below.
+
+# Needed by gpu_smoke_check.py (single-GPU check, no cluster)
+cudf-cu11==25.2.2
+rmm-cu11==25.2.0
+cupy-cuda11x==13.4.0
+
+# Additionally needed by BestGPUReport.py / BestGPU.py (Dask harness)
+dask-cudf-cu11==25.2.*
+dask-cuda==25.2.*
+distributed

@@ -1,0 +1,6 @@
+# scratch from local runs
+work/
+*.duckdb
+dramsim3*.trace
+dramsim3.txt
+dramsim3*.json

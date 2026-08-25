@@ -1,0 +1,50 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "actionApplication": [
+                {
+                    "@id": "#ChameleonJupyterLab"
+                }
+            ],
+            "author": [
+                {
+                    "@id": "#author_0"
+                }
+            ],
+            "datePublished": "2026-08-21T00:00:00+00:00",
+            "description": "Reproduced results for SPARQ, a skew-aware processing-in-memory accelerator for relational join and select queries (PACT 2026). This artifact contains everything needed to re-measure the paper's three measured components from a clean machine, together with every number obtained doing exactly that. 02-sparq/ reproduces the SPARQ join latencies of Figure 7 and is self-contained: the probe traces and simulator configuration ship with it, so it needs no dataset, no GPU and no network. 01-duckdb/ reproduces the DuckDB CPU baselines of Figures 7 to 11, and 03-gpu/ the RAPIDS GPU baseline of Figure 10; both need the Star Schema Benchmark dataset, generated locally with ssb-dbgen. Each directory carries a step-by-step README covering prerequisites, build, load, measurement and the metric definitions, and records the conditions that change a result by more than the effect being measured: the storage class of the database (2 to 22 times on a cold query), NUMA thread placement, query form, and the DuckDB version. RESULTS.md collects every measured value against the value the paper plots. Requirements are quantified per experiment; the measurements were taken on 2x Intel Xeon Gold 6330 with 251 GiB and an NVIDIA A100 40 GB.",
+            "disambiguatingDescription": "Reproduced measurements for the SPARQ PIM accelerator: SPARQ simulation, DuckDB CPU and RAPIDS GPU baselines, with from-scratch instructions",
+            "keywords": "reproducibility, processing-in-memory, PIM, DRAM, relational join, database acceleration, star schema benchmark, DRAMsim3, DuckDB, RAPIDS",
+            "license": "MIT",
+            "name": "SPARQ: Reproduced Results"
+        },
+        {
+            "@id": "trovi.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "#author_0",
+            "@type": "Person",
+            "affiliation": "University of Virginia",
+            "email": "tajdari.sabihe@gmail.com",
+            "name": "Sabihe Tajdari"
+        },
+        {
+            "@id": "#ChameleonJupyterLab",
+            "@type": "SoftwareApplication",
+            "name": "Chameleon JupyterLab",
+            "trovi_arguments": "{}",
+            "trovi_type": "jupyterhub",
+            "url": "https://jupyter.chameleoncloud.org/"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+[
+ {
+  "sf": "1",
+  "table": "customer",
+  "ms": 47.3,
+  "rows": 6001173
+ },
+ {
+  "sf": "1",
+  "table": "part",
+  "ms": 46.6,
+  "rows": 6001173
+ },
+ {
+  "sf": "1",
+  "table": "supplier",
+  "ms": 44.7,
+  "rows": 6001173
+ },
+ {
+  "sf": "1",
+  "table": "date",
+  "ms": 50.1,
+  "rows": 6001173
+ },
+ {
+  "sf": "10",
+  "table": "customer",
+  "ms": 186.1,
+  "rows": 59986217
+ },
+ {
+  "sf": "10",
+  "table": "part",
+  "ms": 191.4,
+  "rows": 59986217
+ },
+ {
+  "sf": "10",
+  "table": "supplier",
+  "ms": 389.5,
+  "rows": 59986217
+ },
+ {
+  "sf": "10",
+  "table": "date",
+  "ms": 450.5,
+  "rows": 59986217
+ }
+]
