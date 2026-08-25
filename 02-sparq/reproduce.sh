@@ -30,13 +30,18 @@ CFG="${CFG:-$HERE/config/SPARQ_DDR4_8Gb_x16_3200.ini}"  # ships in this repo
 WORK="${WORK:-/tmp/sparq_latency_repro}"
 TCK_NS=0.625          # DDR4-3200 memory clock period
 
+SF="${1:-1}"          # scale factor: 1 (default) or 10
 # join -> trace column.  C2=custkey, C3=partkey, C4=suppkey
 declare -A COL=( [customer]=C2 [part]=C3 [supplier]=C4 )
-# what Fig7.py plots, in ns
-declare -A PLOTTED=( [customer]=743997.5 [part]=1076788.75 [supplier]=968215 )
+# published Figure 7 values, ns
+if [ "$SF" = "10" ]; then
+    declare -A PLOTTED=( [customer]=8472425 [part]=12407645 [supplier]=9333137.5 )
+else
+    declare -A PLOTTED=( [customer]=743997.5 [part]=1076788.75 [supplier]=968215 )
+fi
 
 echo "=============================================="
-echo " SPARQ latency reproduction - Figure 7, SF1"
+echo " SPARQ latency reproduction - Figure 7, SF${SF}"
 echo "=============================================="
 
 # --- 1. simulator, built with CMD_TRACE ------------------------------------
@@ -53,7 +58,7 @@ echo "[build] $BUILD/dramsim3main"
 echo "[config] $CFG"
 
 mkdir -p "$WORK"
-OUT="$HERE/results/sparq_latency_reproduction.csv"
+OUT="$HERE/results/sparq_latency_reproduction_sf${SF}.csv"
 echo "sf,col,table,last_read_cycle,ns,plotted_ns,ratio" > "$OUT"
 
 printf "\n%-10s %16s %14s %14s %8s\n" "join" "last_read_cycle" "reproduced_ns" "plotted_ns" "ratio"
@@ -61,7 +66,7 @@ printf -- "---------------------------------------------------------------------
 
 for tbl in customer part supplier; do
     c="${COL[$tbl]}"
-    gz="$HERE/traces/lineorder_sf1_${c}_x16.txt.gz"
+    gz="$HERE/traces/lineorder_sf${SF}_${c}_x16.txt.gz"
     [ -f "$gz" ] || { echo "  missing $gz"; continue; }
 
     w="$WORK/$tbl"; rm -rf "$w"; mkdir -p "$w"; cd "$w"
@@ -75,12 +80,12 @@ for tbl in customer part supplier; do
     cyc=$(tac dramsim3ch_0cmd.trace 2>/dev/null | grep -m1 "read" | awk '{print $1}')
     if [ -z "$cyc" ]; then
         printf "%-10s %16s\n" "$tbl" "FAILED (no command trace - is CMD_TRACE on?)"
-        echo "1,$c,$tbl,,,${PLOTTED[$tbl]}," >> "$OUT"
+        echo "$SF,$c,$tbl,,,${PLOTTED[$tbl]}," >> "$OUT"
     else
         ns=$(python3 -c "print(f'{$cyc * $TCK_NS:.1f}')")
         ratio=$(python3 -c "print(f'{$ns / ${PLOTTED[$tbl]}:.2f}')")
         printf "%-10s %16s %14s %14s %8s\n" "$tbl" "$cyc" "$ns" "${PLOTTED[$tbl]}" "${ratio}x"
-        echo "1,$c,$tbl,$cyc,$ns,${PLOTTED[$tbl]},$ratio" >> "$OUT"
+        echo "$SF,$c,$tbl,$cyc,$ns,${PLOTTED[$tbl]},$ratio" >> "$OUT"
     fi
     # the command trace is ~1 GB; drop it now that the number is extracted
     rm -f dramsim3ch_0cmd.trace trace.txt

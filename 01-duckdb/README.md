@@ -146,3 +146,19 @@ with evidence. The two most likely to catch you:
   loads **empty**, so every query returns no rows in milliseconds and looks fast.
 * **A failed statement still prints a Run Time.** Check for `Error:` explicitly;
   a fast number is not evidence the query ran.
+
+## Original measurement scripts
+
+`original/` holds the scripts used for the published measurements, unchanged:
+
+| | |
+|---|---|
+| `DucDBSSBFullQUery.sh` | the 13 SSB queries, Figures 1 and 11 |
+| `run_joins.sh`, `perf_join_bench.sh` | star joins, Figures 7 and 10 |
+| `run_benchmark_cols.sh` | self-join, DISTINCT and WHERE per column, Figures 8 and 9 |
+| `advisor.sh`, `advisor2.sh` | Intel Advisor drivers, Figure 2 |
+
+`scripts/` holds the harnesses used for the re-measurement here. They run the
+same queries; the differences are that the database is on local disk, each cold
+measurement uses a fresh process, and every run is recorded rather than only the
+summary.

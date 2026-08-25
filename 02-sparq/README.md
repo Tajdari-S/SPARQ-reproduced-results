@@ -144,3 +144,19 @@ python3 SPARQ/experiments/addrgen/newarchitecture/test_with_communication_to_cpu
 ```
 
 Writes one trace per `lineorder` column (C0–C4) per scale factor.
+
+## Original generation and simulation scripts
+
+`original/` holds the code that produced the published SPARQ numbers, unchanged:
+
+| | |
+|---|---|
+| `Oldbetterrankdistribution_x16.py` | address generator; produced the traces in `traces/` |
+| `Oldbetterrankdistribution.py`, `BWoptimizedadd.py` | x8 and bandwidth-optimised variants |
+| `run.sh` | feeds traces to DRAMsim3 and greps the last read cycle |
+| `sensitivity.sh` | the tCMP / tCCD sweep |
+| `dictionary.py` | dictionary encoding of the join keys |
+| `setuplatencycalculation.cpp` | hash build and duplication lists, Table 2 |
+
+`reproduce.sh` here does what `run.sh` does, with the working directory and the
+`CMD_TRACE` build requirement handled explicitly.
