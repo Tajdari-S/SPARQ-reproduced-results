@@ -20,7 +20,11 @@ import statistics as st
 from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# results/ is a sibling of this script in duckdb_versions/, but a sibling of
+# scripts/ in the reproduced-results layout. Accept either.
 RES = os.path.join(HERE, "results")
+if not os.path.isdir(RES):
+    RES = os.path.join(os.path.dirname(HERE), "results")
 ALIAS = {"distinct_orderkey": "C-0", "where_linenumber_3": "C-1"}
 SFS = ["1", "10", "100"]
 
