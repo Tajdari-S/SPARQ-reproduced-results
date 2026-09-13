@@ -12,6 +12,8 @@ directory answers both, with the scripts, data and logs behind each answer.
 ## SPARQ (Figures 7 and 10)
 
 - The simulation is deterministic. The difference is configuration, not noise.
+- The paper's Section 5.1 states tCCD ≈ 2.5 ns, i.e. 4 cycles: the x8 configuration.
+  The figures already show x8 data and need no change; the artifact shipped x16.
 - Plotted bars: 8 Gb x8 chips, 32 GiB channel, `BL` 4, `tCCD_S`/`tCCD_L` 0/4, traces
   from the x8 generator.
 - `02-sparq/`: 8 Gb x16 chips, 16 GiB channel, `BL` 2, `tCCD_S`/`tCCD_L` 1/2, traces
@@ -47,10 +49,8 @@ Requires `NUMBA_CUDA_USE_NVIDIA_BINDING=1` on current NVIDIA drivers (set by
 
 ## Proposed camera-ready changes
 
-1. **Figure 7 and 10 SPARQ bars:** keep them and state the x8 geometry (32 GiB
-   channel, 4 ranks) in the evaluation setup, or re-plot with the x16 values in
-   [`sparq/README.md`](sparq/README.md#reproduced-values) and state x16. Either way,
-   the text and the artifact must name the same geometry.
+1. **Figure 7 and 10 SPARQ bars:** no change. They are the x8 configuration the
+   paper describes (Section 5.1, tCCD ≈ 2.5 ns), and `sparq/` reproduces them exactly.
 2. **Figure 10 GPU bars:** re-plot from
    [`gpu/results/gpu_uniform_results.csv`](gpu/results/gpu_uniform_results.csv).
 3. **Section 5.2.3:** state that the GPU baseline uses dask-cuDF with 256 MiB

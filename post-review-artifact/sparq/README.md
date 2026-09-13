@@ -24,6 +24,13 @@ geometry from the one `02-sparq/` ships.** Both reproduce exactly:
 `scripts/reproduce.sh x8` regenerates every SF1 and SF10 bar in the paper
 cycle-for-cycle. `scripts/reproduce.sh x16` regenerates what the reviewer measured.
 
+**The x8 geometry is the one the paper describes.** Section 5.1 bounds a row-buffer
+hit by tCCD ≈ 2.5 ns. At the 0.625 ns DDR4-3200 clock that is 4 cycles, which is
+`tCCD_L` in the x8 config; the x16 config has `tCCD_L` = 2 cycles (1.25 ns). Both
+configs agree with the paper's other stated values (tRCD+tCL+tRP ≈ 41 ns, 256
+buckets per row). The paper's figures and text were therefore consistent; the
+artifact shipped the wrong configuration, and the figures need no change.
+
 ## Reproduced values
 
 Latency = completion cycle x 0.625 ns. Every row below was re-simulated with
