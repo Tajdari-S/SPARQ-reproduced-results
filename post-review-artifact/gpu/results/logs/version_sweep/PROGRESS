@@ -1,0 +1,18 @@
+page cache warmed 11:39:37
+BestGPU.py rc=0 11:41:16
+BestGPUReport.py rc=0 11:42:54
+FinalJoin.py rc=0 11:43:22
+NewFinalJoin.py rc=0 11:43:45
+join_VF.py rc=0 11:45:03
+test13.py rc=0 11:46:31
+test1.py rc=1 11:46:54
+test2.py rc=0 11:47:33
+test3.py rc=0 11:47:56
+test4.py rc=0 11:48:24
+test5.py rc=0 11:48:37
+test6.py rc=0 11:48:50
+test7.py rc=1 11:49:03
+test8.py rc=1 11:49:16
+test9.py rc=0 11:49:34
+test10.py rc=0 11:52:02
+ALLDONE

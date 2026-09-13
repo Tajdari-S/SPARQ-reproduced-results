@@ -1,0 +1,69 @@
+### FinalJoin.py  start 2026-09-13 12:03:57  gpu_mem_used=0 MiB
+14c14
+<         protocol="ucx",
+---
+>         protocol="tcp",
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+Dask Cluster Initialized: <Client: 'tcp://127.0.0.1:36391' processes=1 threads=1, memory=251.32 GiB>
+
+SSB Benchmark Started: 2026-09-13 12:04:04.211551
+
+========================================
+Processing SF100 at 2026-09-13 12:04:04.211608
+========================================
+Lazily loaded /p/pd/ssb-dbgen/sf100/lineorder.tbl | Partitions: 64
+Lazily loaded /p/pd/ssb-dbgen/sf100/date.tbl | Partitions: 1
+Lazily loaded /p/pd/ssb-dbgen/sf100/customer.tbl | Partitions: 1
+Lazily loaded /p/pd/ssb-dbgen/sf100/supplier.tbl | Partitions: 1
+Lazily loaded /p/pd/ssb-dbgen/sf100/part.tbl | Partitions: 1
+
+Joining lineorder ⋈ customer
+2026-09-13 12:10:34,210 - distributed.worker - ERROR - Compute Failed
+Key:       ('blockwisemerge-f29a71e0067e3f4eee7d40c8a2f484bd', 9)
+State:     executing
+Task:  <Task ('blockwisemerge-f29a71e0067e3f4eee7d40c8a2f484bd', 9) merge_chunk(..., ...)>
+Exception: "MemoryError('std::bad_alloc: out_of_memory: RMM failure at:/myenv/rapids_env/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded')"
+Traceback: '  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/dataframe/multi.py", line 299, in merge_chunk\n    out = lhs.merge(rhs, *args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/dataframe.py", line 4326, in merge\n    ).perform_merge()\n      ^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/join/join.py", line 282, in perform_merge\n    left_rows, right_rows = self._gather_maps(\n                            ^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/join/join.py", line 208, in _gather_maps\n    maps = self._joiner(\n           ^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/contextlib.py", line 81, in inner\n    return func(*args, **kwds)\n           ^^^^^^^^^^^^^^^^^^^\n  File "join.pyx", line 20, in cudf._lib.join.join\n  File "join.pyx", line 50, in pylibcudf.join.inner_join\n  File "join.pyx", line 76, in pylibcudf.join.inner_join\n'
+
+Join failed: std::bad_alloc: out_of_memory: RMM failure at:/myenv/rapids_env/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+Memory cleaned after lineorder-customer join
+
+Joining lineorder ⋈ date
+/myenv/rapids_env/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+### FinalJoin.py  end 2026-09-13 12:15:12  rc=143

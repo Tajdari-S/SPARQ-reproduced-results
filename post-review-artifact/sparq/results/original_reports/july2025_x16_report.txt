@@ -1,0 +1,75 @@
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf100_C0_x16.txt
+num_read_cmds                  =     60345282   # Number of READ/READP commands
+97156259           read                   0   1   1   3      0x0     0xb7
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf100_C1_x16.txt
+num_read_cmds                  =     37489014   # Number of READ/READP commands
+75000018           read                   0   0   0   0      0x0      0x1
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf100_C2_x16.txt
+num_read_cmds                  =     60343814   # Number of READ/READP commands
+97143202           read                   0   1   1   3      0x0    0x1e1
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf100_C3_x16.txt
+num_read_cmds                  =     74583040   # Number of READ/READP commands
+141580999          read                   0   1   1   3      0x1    0x191
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf100_C4_x16.txt
+num_read_cmds                  =     74587842   # Number of READ/READP commands
+141981199          read                   0   1   1   3      0x1     0x56
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf10_C0_x16.txt
+num_read_cmds                  =      5921914   # Number of READ/READP commands
+33466343           read                   0   1   1   3     0xdf     0xa0
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf10_C1_x16.txt
+num_read_cmds                  =      3748920   # Number of READ/READP commands
+7500021            read                   0   0   0   0      0x0      0x2
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf10_C2_x16.txt
+num_read_cmds                  =      5907418   # Number of READ/READP commands
+12380976           read                   0   3   1   2      0x0     0x4f
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf10_C3_x16.txt
+num_read_cmds                  =      7492827   # Number of READ/READP commands
+26178913           read                   0   0   1   3      0x0     0x3a
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf10_C4_x16.txt
+num_read_cmds                  =      7440193   # Number of READ/READP commands
+12347054           read                   0   0   1   3      0x0     0x14
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf1_C0_x16.txt
+num_read_cmds                  =       592150   # Number of READ/READP commands
+2753315            read                   0   1   1   3     0x10    0x1a5
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf1_C1_x16.txt
+num_read_cmds                  =       374898   # Number of READ/READP commands
+750031             read                   0   1   0   0      0x0      0x1
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf1_C2_x16.txt
+num_read_cmds                  =       602616   # Number of READ/READP commands
+971000             read                   0   2   1   2      0x0      0xb
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf1_C3_x16.txt
+num_read_cmds                  =       747544   # Number of READ/READP commands
+1574558            read                   0   0   1   2      0x2    0x112
+
+----------------------------------------
+/p/pd/pim/newarchitecture/test_with_communication_to_cpu/8channel/morebankchange/sensitivity_results/lineorder_LatencyRankoptd_ch1_sf1_C4_x16.txt
+num_read_cmds                  =       743097   # Number of READ/READP commands
+849117             read                   0   0   0   3      0x0    0x1e2
+

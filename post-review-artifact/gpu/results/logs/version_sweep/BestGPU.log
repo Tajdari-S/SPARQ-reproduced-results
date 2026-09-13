@@ -1,0 +1,142 @@
+### BestGPU.py  start 2026-09-13 11:39:37  gpu_mem_used=0 MiB
+15c15
+<         protocol="ucx",
+---
+>         protocol="tcp",
+116c116
+<         ('100', '/p/pd/ssb-dbgen/sf100/', False, "256 MiB")
+---
+>         ('100', '/nonexistent_phase1/sf100/', False, "256 MiB")
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+Dask Cluster Initialized: <Client: 'tcp://127.0.0.1:45763' processes=1 threads=1, memory=251.32 GiB>
+
+SSB Benchmark Started: 2026-09-13 11:39:44.261206
+
+========================================
+Processing SF1 at 2026-09-13 11:39:44.261262
+========================================
+Lazily loaded /p/pd/pim/sf1/lineorder.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/date.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/customer.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/supplier.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/part.tbl | Partitions: 1
+
+Joining lineorder ⋈ customer
+Join computed in 167756319.0460ns (GPU time), transferred to CPU in 772163391.1133ns, result has 6,001,173 rows
+Memory cleaned after lineorder-customer join
+
+Joining lineorder ⋈ date
+Join computed in 69117784.5001ns (GPU time), transferred to CPU in 680389404.2969ns, result has 6,001,173 rows
+Memory cleaned after lineorder-date join
+
+Joining lineorder ⋈ supplier
+Join computed in 71172475.8148ns (GPU time), transferred to CPU in 631467103.9581ns, result has 6,001,173 rows
+Memory cleaned after lineorder-supplier join
+
+Joining lineorder ⋈ part
+Join computed in 73738336.5631ns (GPU time), transferred to CPU in 767619132.9956ns, result has 6,001,173 rows
+Memory cleaned after lineorder-part join
+
+Joining lineorder ⋈ customer
+Join computed in 75456619.2627ns (GPU time), transferred to CPU in 625308752.0599ns, result has 6,001,173 rows
+Memory cleaned after lineorder-customer join
+
+Completed SF1 processing at 2026-09-13 11:39:49.313004
+
+========================================
+Processing SF10 at 2026-09-13 11:39:49.313067
+========================================
+Lazily loaded /p/pd/pim/sf10/lineorder.tbl | Partitions: 12
+Lazily loaded /p/pd/pim/sf10/date.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/customer.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/supplier.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/part.tbl | Partitions: 1
+
+Joining lineorder ⋈ customer
+Join computed in 2489780664.4440ns (GPU time), transferred to CPU in 14547325134.2773ns, result has 59,986,217 rows
+Memory cleaned after lineorder-customer join
+
+Joining lineorder ⋈ date
+Join computed in 1935070991.5161ns (GPU time), transferred to CPU in 13599704265.5945ns, result has 59,986,217 rows
+Memory cleaned after lineorder-date join
+
+Joining lineorder ⋈ supplier
+Join computed in 1790522575.3784ns (GPU time), transferred to CPU in 13343102455.1392ns, result has 59,986,217 rows
+Memory cleaned after lineorder-supplier join
+
+Joining lineorder ⋈ part
+Join computed in 1783559322.3572ns (GPU time), transferred to CPU in 13536077737.8082ns, result has 59,986,217 rows
+Memory cleaned after lineorder-part join
+
+Joining lineorder ⋈ customer
+Join computed in 1788177967.0715ns (GPU time), transferred to CPU in 13293427228.9276ns, result has 59,986,217 rows
+Memory cleaned after lineorder-customer join
+
+Completed SF10 processing at 2026-09-13 11:41:10.533894
+
+========================================
+Processing SF100 at 2026-09-13 11:41:10.533933
+========================================
+Error loading /nonexistent_phase1/sf100/lineorder.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/date.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/customer.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/supplier.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/part.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+
+Joining lineorder ⋈ customer
+
+Joining lineorder ⋈ date
+
+Joining lineorder ⋈ supplier
+
+Joining lineorder ⋈ part
+
+Joining lineorder ⋈ customer
+
+Completed SF100 processing at 2026-09-13 11:41:10.584108
+### BestGPU.py  end 2026-09-13 11:41:16  rc=0

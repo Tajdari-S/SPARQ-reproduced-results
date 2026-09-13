@@ -1,0 +1,389 @@
+### test13.py  start 2026-09-13 11:45:03  gpu_mem_used=0 MiB
+60c60
+<         ('100', '/p/pd/ssb-dbgen/sf100/')
+---
+>         ('100', '/nonexistent_phase1/sf100/')
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+Dask Client Initialized: <Client: 'tcp://127.0.0.1:46133' processes=14 threads=112, memory=251.32 GiB>
+
+Starting SSB joins at 2026-09-13 11:45:09.379027
+
+Processing scale factor 1
+
+Joining lineorder with customer
+Loaded /p/pd/pim/sf1/lineorder.tbl with 6,001,173 rows (Lazy Execution)
+Loaded /p/pd/pim/sf1/customer.tbl with 30,000 rows (Lazy Execution)
+Join completed: 6,001,173 rows in 3.12 seconds
+lineorder_customer join result: 6,001,173 rows
+Join completed in 3.12 seconds
+
+Joining lineorder with date
+Loaded /p/pd/pim/sf1/lineorder.tbl with 6,001,173 rows (Lazy Execution)
+Loaded /p/pd/pim/sf1/date.tbl with 2,557 rows (Lazy Execution)
+Join completed: 6,001,173 rows in 2.10 seconds
+lineorder_date join result: 6,001,173 rows
+Join completed in 2.10 seconds
+
+Joining lineorder with supplier
+Loaded /p/pd/pim/sf1/lineorder.tbl with 6,001,173 rows (Lazy Execution)
+Loaded /p/pd/pim/sf1/supplier.tbl with 2,000 rows (Lazy Execution)
+Join completed: 6,001,173 rows in 2.68 seconds
+lineorder_supplier join result: 6,001,173 rows
+Join completed in 2.68 seconds
+
+Joining lineorder with part
+Loaded /p/pd/pim/sf1/lineorder.tbl with 6,001,173 rows (Lazy Execution)
+Loaded /p/pd/pim/sf1/part.tbl with 200,000 rows (Lazy Execution)
+Join completed: 6,001,173 rows in 2.32 seconds
+lineorder_part join result: 6,001,173 rows
+Join completed in 2.32 seconds
+Completed processing scale factor 1
+
+Processing scale factor 10
+
+Joining lineorder with customer
+Loaded /p/pd/pim/sf10/lineorder.tbl with 59,986,217 rows (Lazy Execution)
+Loaded /p/pd/pim/sf10/customer.tbl with 300,000 rows (Lazy Execution)
+Join completed: 59,986,217 rows in 47.14 seconds
+lineorder_customer join result: 59,986,217 rows
+Join completed in 47.14 seconds
+
+Joining lineorder with date
+Loaded /p/pd/pim/sf10/lineorder.tbl with 59,986,217 rows (Lazy Execution)
+Loaded /p/pd/pim/sf10/date.tbl with 2,557 rows (Lazy Execution)
+2026-09-13 11:46:21,682 - distributed.worker - ERROR - Compute Failed
+Key:       ('repartitiontofewer-1e4d1293fb4a16bf2944cddce955bdaf', 0)
+State:     executing
+Task:  <Task ('repartitiontofewer-1e4d1293fb4a16bf2944cddce955bdaf', 0) _concat(...)>
+Exception: "MemoryError('std::bad_alloc: out_of_memory: CUDA error at: /myenv/rapids_env/include/rmm/mr/device/cuda_memory_resource.hpp:62: cudaErrorMemoryAllocation out of memory')"
+Traceback: '  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/dataframe/core.py", line 181, in _concat\n    else methods.concat(args2, uniform=True, ignore_index=ignore_index)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/dataframe/dispatch.py", line 68, in concat\n    return func(\n           ^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask_cudf/backends.py", line 303, in concat_cudf\n    return cudf.concat(dfs, axis=axis, ignore_index=ignore_index)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/reshape.py", line 511, in concat\n    result = cudf.DataFrame._concat(\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/dataframe.py", line 1820, in _concat\n    out.index = cudf.core.index.Index._concat([o.index for o in objs])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/index.py", line 1248, in _concat\n    result = _concat_range_index(non_empties)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/index.py", line 3860, in _concat_range_index\n    concat_columns([x._column for x in indexes])\n                    ^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/index.py", line 895, in _column\n    return self._as_int_index()._column\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/index.py", line 609, in _as_int_index\n    return cudf.Index._from_data(self._data)\n                                 ^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/index.py", line 372, in _data\n    {self.name: self._values}, verify=False\n                ^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/functools.py", line 995, in __get__\n    val = self.func(instance)\n          ^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/index.py", line 335, in _values\n    return column.as_column(self._range, dtype=self.dtype)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/core/column/column.py", line 1750, in as_column\n    column = libcudf.filling.sequence(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/contextlib.py", line 81, in inner\n    return func(*args, **kwds)\n           ^^^^^^^^^^^^^^^^^^^\n  File "filling.pyx", line 52, in cudf._lib.filling.sequence\n  File "filling.pyx", line 103, in pylibcudf.filling.sequence\n  File "filling.pyx", line 127, in pylibcudf.filling.sequence\n'
+
+Error during join: std::bad_alloc: out_of_memory: CUDA error at: /myenv/rapids_env/include/rmm/mr/device/cuda_memory_resource.hpp:62: cudaErrorMemoryAllocation out of memory
+
+Joining lineorder with supplier
+2026-09-13 11:46:23,722 - distributed.worker - ERROR - Compute Failed
+Key:       ('read_csv-chunk-be0d183beb3e374effd93117a7433842', 8)
+State:     executing
+Task:  <Task ('read_csv-chunk-be0d183beb3e374effd93117a7433842', 8) _execute_internal_graph(...)>
+Exception: "MemoryError('std::bad_alloc: out_of_memory: CUDA error at: /myenv/rapids_env/include/rmm/mr/device/cuda_memory_resource.hpp:62: cudaErrorMemoryAllocation out of memory')"
+Traceback: '  File "/myenv/rapids_env/lib/python3.12/site-packages/dask_expr/_expr.py", line 3799, in _execute_internal_graph\n    res = execute_graph(internal_tasks, cache=cache, keys=[outkey])\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 786, in execute_graph\n    cache[key] = node(cache)\n                 ^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 647, in __call__\n    new_argspec = _call_recursively(self.args, values)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 537, in _call_recursively\n    return type(obj)(_call_recursively(v, values) for v in obj)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 537, in <genexpr>\n    return type(obj)(_call_recursively(v, values) for v in obj)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 533, in _call_recursively\n    return obj(values)\n           ^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 651, in __call__\n    return self.func(*new_argspec)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/utils.py", line 77, in apply\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask_cudf/_legacy/io/csv.py", line 184, in _read_csv\n    return cudf.read_csv(fn, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/io/csv.py", line 80, in read_csv\n    df = libcudf.csv.read_csv(\n         ^^^^^^^^^^^^^^^^^^^^^\n  File "csv.pyx", line 210, in cudf._lib.csv.read_csv\n  File "csv.pyx", line 274, in pylibcudf.io.csv.read_csv\n'
+
+Error loading /p/pd/pim/sf10/lineorder.tbl: std::bad_alloc: out_of_memory: CUDA error at: /myenv/rapids_env/include/rmm/mr/device/cuda_memory_resource.hpp:62: cudaErrorMemoryAllocation out of memory
+Loaded /p/pd/pim/sf10/supplier.tbl with 20,000 rows (Lazy Execution)
+
+Joining lineorder with part
+2026-09-13 11:46:25,991 - distributed.worker - ERROR - Compute Failed
+Key:       ('read_csv-chunk-be0d183beb3e374effd93117a7433842', 6)
+State:     executing
+Task:  <Task ('read_csv-chunk-be0d183beb3e374effd93117a7433842', 6) _execute_internal_graph(...)>
+Exception: "MemoryError('std::bad_alloc: out_of_memory: CUDA error at: /myenv/rapids_env/include/rmm/mr/device/cuda_memory_resource.hpp:62: cudaErrorMemoryAllocation out of memory')"
+Traceback: '  File "/myenv/rapids_env/lib/python3.12/site-packages/dask_expr/_expr.py", line 3799, in _execute_internal_graph\n    res = execute_graph(internal_tasks, cache=cache, keys=[outkey])\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 786, in execute_graph\n    cache[key] = node(cache)\n                 ^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 647, in __call__\n    new_argspec = _call_recursively(self.args, values)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 537, in _call_recursively\n    return type(obj)(_call_recursively(v, values) for v in obj)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 537, in <genexpr>\n    return type(obj)(_call_recursively(v, values) for v in obj)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 533, in _call_recursively\n    return obj(values)\n           ^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/_task_spec.py", line 651, in __call__\n    return self.func(*new_argspec)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask/utils.py", line 77, in apply\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/dask_cudf/_legacy/io/csv.py", line 184, in _read_csv\n    return cudf.read_csv(fn, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/performance_tracking.py", line 51, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/myenv/rapids_env/lib/python3.12/site-packages/cudf/io/csv.py", line 80, in read_csv\n    df = libcudf.csv.read_csv(\n         ^^^^^^^^^^^^^^^^^^^^^\n  File "csv.pyx", line 210, in cudf._lib.csv.read_csv\n  File "csv.pyx", line 274, in pylibcudf.io.csv.read_csv\n'
+
+Error loading /p/pd/pim/sf10/lineorder.tbl: std::bad_alloc: out_of_memory: CUDA error at: /myenv/rapids_env/include/rmm/mr/device/cuda_memory_resource.hpp:62: cudaErrorMemoryAllocation out of memory
+Loaded /p/pd/pim/sf10/part.tbl with 800,000 rows (Lazy Execution)
+Completed processing scale factor 10
+
+Processing scale factor 100
+
+Joining lineorder with customer
+Error loading /nonexistent_phase1/sf100/lineorder.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/customer.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+
+Joining lineorder with date
+Error loading /nonexistent_phase1/sf100/lineorder.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/date.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+
+Joining lineorder with supplier
+Error loading /nonexistent_phase1/sf100/lineorder.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/supplier.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+
+Joining lineorder with part
+Error loading /nonexistent_phase1/sf100/lineorder.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/part.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Completed processing scale factor 100
+### test13.py  end 2026-09-13 11:46:31  rc=0

@@ -1,0 +1,351 @@
+### test1.py  start 2026-09-13 11:46:31  gpu_mem_used=0 MiB
+111,115c111,115
+<     tables['lineorder100'] = load_table_dask('/p/pd/ssb-dbgen/sf100/cleaned_lineorder.tbl', lineorder_cols)
+<     tables['date100'] = load_table_dask('/p/pd/pim/sf100/date.tbl', date_cols)
+<     tables['customer100'] = load_table_dask('/p/pd/pim/sf100/customer.tbl', customer_cols)
+<     tables['supplier100'] = load_table_dask('/p/pd/pim/sf100/supplier.tbl', supplier_cols)
+<     tables['part100'] = load_table_dask('/p/pd/pim/sf100/part.tbl', part_cols)
+---
+>     tables['lineorder100'] = load_table_dask('/nonexistent_phase1/sf100/cleaned_lineorder.tbl', lineorder_cols)
+>     tables['date100'] = load_table_dask('/nonexistent_phase1/sf100/date.tbl', date_cols)
+>     tables['customer100'] = load_table_dask('/nonexistent_phase1/sf100/customer.tbl', customer_cols)
+>     tables['supplier100'] = load_table_dask('/nonexistent_phase1/sf100/supplier.tbl', supplier_cols)
+>     tables['part100'] = load_table_dask('/nonexistent_phase1/sf100/part.tbl', part_cols)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+Dask client initialized with memory limit of 120GB.
+RMM memory pool initialized with 30GB.
+
+GPU Context Information:
+GPU Device: NVIDIA A100-PCIE-40GB                                                                                                           
+Compute Capability: (8, 0)
+
+Total GPU Memory: 11.96 GB
+Free GPU Memory: 42.40 GB
+
+Starting SSB joins at 2026-09-13 11:46:38.702094
+Loaded /p/pd/pim/sf1/lineorder.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf1/date.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf1/customer.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf1/supplier.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf1/part.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf10/lineorder.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf10/date.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf10/customer.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf10/supplier.tbl with Dask-cuDF.
+Loaded /p/pd/pim/sf10/part.tbl with Dask-cuDF.
+Error loading /nonexistent_phase1/sf100/cleaned_lineorder.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/date.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/customer.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/supplier.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/part.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+
+Performing joins...
+Join (lineorder1 x customer1) completed in 0.02 seconds.
+Join (lineorder1 x date1) completed in 0.01 seconds.
+Join (lineorder1 x supplier1) completed in 0.01 seconds.
+Join (lineorder1 x part1) completed in 0.01 seconds.
+Join (lineorder10 x customer10) completed in 0.01 seconds.
+Join (lineorder10 x date10) completed in 0.01 seconds.
+Join (lineorder10 x supplier10) completed in 0.01 seconds.
+Join (lineorder10 x part10) completed in 0.01 seconds.
+Error during join: 'NoneType' object has no attribute 'merge'
+Error during join: 'NoneType' object has no attribute 'merge'
+Error during join: 'NoneType' object has no attribute 'merge'
+Error during join: 'NoneType' object has no attribute 'merge'
+
+Join results summary:
+lineorder_customer1: 6,001,173 rows, 0.56 GB, completed in 0.02 seconds.
+lineorder_date1: 6,001,173 rows, 0.60 GB, completed in 0.01 seconds.
+lineorder_supplier1: 6,001,173 rows, 0.54 GB, completed in 0.01 seconds.
+lineorder_part1: 6,001,173 rows, 0.58 GB, completed in 0.01 seconds.
+lineorder_customer2: 59,986,217 rows, 5.59 GB, completed in 0.01 seconds.
+lineorder_date2: 59,986,217 rows, 6.03 GB, completed in 0.01 seconds.
+lineorder_supplier2: 59,986,217 rows, 5.36 GB, completed in 0.01 seconds.
+lineorder_part2: 59,986,217 rows, 5.81 GB, completed in 0.01 seconds.
+Traceback (most recent call last):
+  File "/tmp/claude-9442945/-p-pd/44120978-a89f-4ce1-b02f-14cb1eb26ae3/scratchpad/gpurepro/phase1/test1/test1.py", line 148, in <module>
+    main()
+  File "/tmp/claude-9442945/-p-pd/44120978-a89f-4ce1-b02f-14cb1eb26ae3/scratchpad/gpurepro/phase1/test1/test1.py", line 139, in main
+    table_size = int(result_table.shape[0].compute())  # Number of rows
+                     ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+### test1.py  end 2026-09-13 11:46:54  rc=1

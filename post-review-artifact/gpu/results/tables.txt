@@ -1,0 +1,32 @@
+uniform_loadfixed repetitions: 3
+
+                 paper ms  orig (SF-dep)  uniform as-is  uniform fixed fixed/paper  spread
+SF1   customer       169.4          171.0         4848.5          153.5       0.91x     23%
+SF1   part           190.1           81.5          223.5          238.3       1.25x      7%
+SF1   supplier        73.8           70.2          116.9          114.7       1.55x     14%
+SF1   date            75.4           68.2          119.2          124.5       1.65x     16%
+SF10  customer      1890.0         2378.0        54755.8         1294.1       0.68x      2%
+SF10  part          1830.2         1698.5         1579.5         1562.2       0.85x      2%
+SF10  supplier      1823.2         1722.1         1645.1         1665.8       0.91x      9%
+SF10  date          1947.7         1940.7         1278.5         1704.1       0.87x     10%
+SF100 customer     65034.5       215682.6       301130.5        76102.6       1.17x     12%
+SF100 part         53258.7        64478.0        63692.4        58814.9       1.10x     21%
+SF100 supplier     53202.0        59156.1        73754.0        61521.1       1.16x     11%
+SF100 date         56112.3        76270.9        66284.4        72252.1       1.29x     11%
+
+Speedup of SPARQ over the GPU baseline (GPU ms / SPARQ ms)
+                 paper (x8)  fixed vs x8  fixed vs x16
+SF1   customer          228x         206x          253x
+SF1   part              177x         221x          242x
+SF1   supplier           76x         118x          216x
+SF1   date               99x         163x             -
+SF10  customer          223x         153x          167x
+SF10  part              148x         126x           95x
+SF10  supplier          195x         178x          216x
+SF10  date              255x         223x             -
+SF100 customer          871x        1019x         1253x
+SF100 part              526x         581x          665x
+SF100 supplier          525x         607x          693x
+SF100 date              734x         945x             -
+
+-> results/gpu_uniform_results.csv

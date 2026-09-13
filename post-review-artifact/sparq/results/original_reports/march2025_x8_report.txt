@@ -1,0 +1,90 @@
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf100_C0.txt
+num_read_cmds                  =     58945975   # Number of READ/READP commands
+119429831          read                   0   1   0   3      0x0     0x3e
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf100_C1.txt
+num_read_cmds                  =     24983985   # Number of READ/READP commands
+75000052           read                   0   1   0   0      0x0      0x0
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf100_C2.txt
+num_read_cmds                  =     58943786   # Number of READ/READP commands
+119446108          read                   0   2   2   3      0x0     0xf6
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf100_C3.txt
+num_read_cmds                  =     74437712   # Number of READ/READP commands
+162103413          read                   0   3   3   3      0x0     0xe5
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf100_C4.txt
+num_read_cmds                  =     74442506   # Number of READ/READP commands
+162185592          read                   0   3   3   3      0x1     0x3a
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf100_C5.txt
+num_read_cmds                  =     59231199   # Number of READ/READP commands
+122279000          read                   0   3   0   3      0x0     0x76
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf10_C0.txt
+num_read_cmds                  =      5893666   # Number of READ/READP commands
+18459120           read                   0   2   3   2     0x88     0xd3
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf10_C1.txt
+num_read_cmds                  =      2498407   # Number of READ/READP commands
+7500049            read                   0   1   0   0      0x0      0x5
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf10_C2.txt
+num_read_cmds                  =      5881808   # Number of READ/READP commands
+13555880           read                   0   3   3   2      0x1     0x4a
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf10_C3.txt
+num_read_cmds                  =      7488010   # Number of READ/READP commands
+19852232           read                   0   1   3   1      0x6     0x99
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf10_C4.txt
+num_read_cmds                  =      7378178   # Number of READ/READP commands
+14933020           read                   0   1   2   3      0x0     0x3e
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf10_C5.txt
+num_read_cmds                  =      5922445   # Number of READ/READP commands
+12228181           read                   0   0   1   3      0x0     0x4e
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf1_C0.txt
+num_read_cmds                  =       589014   # Number of READ/READP commands
+1703183            read                   0   3   3   3      0x0     0x34
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf1_C1.txt
+num_read_cmds                  =       249854   # Number of READ/READP commands
+750063             read                   0   0   0   0      0x0      0x4
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf1_C2.txt
+num_read_cmds                  =       587412   # Number of READ/READP commands
+1190396            read                   0   2   2   3      0x0     0xbb
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf1_C3.txt
+num_read_cmds                  =       746406   # Number of READ/READP commands
+1722862            read                   0   3   3   3      0x0     0x2c
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf1_C4.txt
+num_read_cmds                  =       736858   # Number of READ/READP commands
+1549144            read                   0   0   0   3      0x0     0xa7
+
+----------------------------------------
+./lineorder_LatencyRankoptd_ch1_sf1_C5.txt
+num_read_cmds                  =       591297   # Number of READ/READP commands
+1222605            read                   0   2   1   3      0x0     0x14
+

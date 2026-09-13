@@ -1,0 +1,134 @@
+### BestGPU_uniform.py  start 2026-09-13 12:29:17  gpu_mem_used=0 MiB
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+Dask Cluster Initialized: <Client: 'tcp://127.0.0.1:32805' processes=1 threads=1, memory=251.32 GiB>
+
+SSB Benchmark Started: 2026-09-13 12:29:24.065276
+
+========================================
+Processing SF1 at 2026-09-13 12:29:24.065332
+========================================
+Lazily loaded /p/pd/pim/sf1/lineorder.tbl | Partitions: 3
+Lazily loaded /p/pd/pim/sf1/date.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/customer.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/supplier.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/part.tbl | Partitions: 1
+
+Joining lineorder ⋈ customer
+Join computed in 4848486900.3296ns (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-customer join
+
+Joining lineorder ⋈ date
+Join computed in 119168758.3923ns (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-date join
+
+Joining lineorder ⋈ supplier
+Join computed in 116864442.8253ns (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-supplier join
+
+Joining lineorder ⋈ part
+Join computed in 223456144.3329ns (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-part join
+
+Joining lineorder ⋈ customer
+Join computed in 118798732.7576ns (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-customer join
+
+Completed SF1 processing at 2026-09-13 12:29:31.419039
+
+========================================
+Processing SF10 at 2026-09-13 12:29:31.419099
+========================================
+Lazily loaded /p/pd/pim/sf10/lineorder.tbl | Partitions: 24
+Lazily loaded /p/pd/pim/sf10/date.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/customer.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/supplier.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/part.tbl | Partitions: 1
+
+Joining lineorder ⋈ customer
+Join computed in 54755766391.7542ns (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-customer join
+
+Joining lineorder ⋈ date
+Join computed in 1278530120.8496ns (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-date join
+
+Joining lineorder ⋈ supplier
+Join computed in 1645081996.9177ns (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-supplier join
+
+Joining lineorder ⋈ part
+Join computed in 1579518079.7577ns (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-part join
+
+Joining lineorder ⋈ customer
+Join computed in 1573112964.6301ns (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-customer join
+
+Completed SF10 processing at 2026-09-13 12:30:39.774127
+
+========================================
+Processing SF100 at 2026-09-13 12:30:39.774214
+========================================
+Lazily loaded /p/pd/ssb-dbgen/sf100/lineorder.tbl | Partitions: 254
+Lazily loaded /p/pd/ssb-dbgen/sf100/date.tbl | Partitions: 1
+Lazily loaded /p/pd/ssb-dbgen/sf100/customer.tbl | Partitions: 2
+Lazily loaded /p/pd/ssb-dbgen/sf100/supplier.tbl | Partitions: 1
+Lazily loaded /p/pd/ssb-dbgen/sf100/part.tbl | Partitions: 1
+
+Joining lineorder ⋈ customer
+Join computed in 301130547761.9171ns (GPU time), result has 600,037,902 rows
+Memory cleaned after lineorder-customer join
+
+Joining lineorder ⋈ date
+Join computed in 66284416913.9862ns (GPU time), result has 600,037,902 rows
+Memory cleaned after lineorder-date join
+
+Joining lineorder ⋈ supplier
+Join computed in 73753951787.9486ns (GPU time), result has 600,037,902 rows
+Memory cleaned after lineorder-supplier join
+
+Joining lineorder ⋈ part
+Join computed in 63692370653.1525ns (GPU time), result has 600,037,902 rows
+Memory cleaned after lineorder-part join
+
+Joining lineorder ⋈ customer
+Join computed in 73676102399.8260ns (GPU time), result has 600,037,902 rows
+Memory cleaned after lineorder-customer join
+
+Completed SF100 processing at 2026-09-13 12:43:47.179339
+### BestGPU_uniform.py  end 2026-09-13 12:44:03  rc=0

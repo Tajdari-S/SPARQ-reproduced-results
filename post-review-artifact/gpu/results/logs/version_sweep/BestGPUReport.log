@@ -1,0 +1,152 @@
+### BestGPUReport.py  start 2026-09-13 11:41:16  gpu_mem_used=0 MiB
+15c15
+<         protocol="ucx",
+---
+>         protocol="tcp",
+124c124
+<         ('100', '/p/pd/ssb-dbgen/sf100/', False, "256 MiB")
+---
+>         ('100', '/nonexistent_phase1/sf100/', False, "256 MiB")
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+/myenv/rapids_env/lib/python3.12/site-packages/cudf/utils/_ptxcompiler.py:64: UserWarning: Error getting driver and runtime versions:
+
+stdout:
+
+
+
+stderr:
+
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/myenv/rapids_env/lib/python3.12/site-packages/numba_cuda/numba/cuda/cudadrv/driver.py", line 325, in safe_cuda_api_call
+    return self._check_cuda_python_error(fname, libfn(*args))
+                                                ^^^^^^^^^^^^
+TypeError: cuDriverGetVersion() takes no arguments (1 given)
+
+
+Not patching Numba
+  warnings.warn(msg, UserWarning)
+Dask Cluster Initialized: <Client: 'tcp://127.0.0.1:39067' processes=1 threads=1, memory=251.32 GiB>
+
+SSB Benchmark Started: 2026-09-13 11:41:22.449323
+
+========================================
+Processing SF1 at 2026-09-13 11:41:22.449361
+========================================
+Lazily loaded /p/pd/pim/sf1/lineorder.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/date.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/customer.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/supplier.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf1/part.tbl | Partitions: 1
+
+Joining lineorder ⋈ customer
+Join computed in 0.1681s (GPU time), transferred to CPU in 0.7876s, result has 6,001,173 rows
+Join setup in 0.0258s (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-customer join
+
+Joining lineorder ⋈ date
+Join computed in 0.0580s (GPU time), transferred to CPU in 0.7122s, result has 6,001,173 rows
+Join setup in 0.0206s (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-date join
+
+Joining lineorder ⋈ supplier
+Join computed in 0.0677s (GPU time), transferred to CPU in 0.6621s, result has 6,001,173 rows
+Join setup in 0.0240s (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-supplier join
+
+Joining lineorder ⋈ part
+Join computed in 0.0772s (GPU time), transferred to CPU in 0.7498s, result has 6,001,173 rows
+Join setup in 0.0225s (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-part join
+
+Joining lineorder ⋈ customer
+Join computed in 0.0663s (GPU time), transferred to CPU in 0.6840s, result has 6,001,173 rows
+Join setup in 0.0229s (GPU time), result has 6,001,173 rows
+Memory cleaned after lineorder-customer join
+
+Completed SF1 processing at 2026-09-13 11:41:27.615083
+
+========================================
+Processing SF10 at 2026-09-13 11:41:27.615150
+========================================
+Lazily loaded /p/pd/pim/sf10/lineorder.tbl | Partitions: 12
+Lazily loaded /p/pd/pim/sf10/date.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/customer.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/supplier.tbl | Partitions: 1
+Lazily loaded /p/pd/pim/sf10/part.tbl | Partitions: 1
+
+Joining lineorder ⋈ customer
+Join computed in 2.4214s (GPU time), transferred to CPU in 14.0711s, result has 59,986,217 rows
+Join setup in 0.0145s (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-customer join
+
+Joining lineorder ⋈ date
+Join computed in 1.3877s (GPU time), transferred to CPU in 14.3693s, result has 59,986,217 rows
+Join setup in 0.0164s (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-date join
+
+Joining lineorder ⋈ supplier
+Join computed in 1.8717s (GPU time), transferred to CPU in 13.5232s, result has 59,986,217 rows
+Join setup in 0.0155s (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-supplier join
+
+Joining lineorder ⋈ part
+Join computed in 1.7982s (GPU time), transferred to CPU in 13.7513s, result has 59,986,217 rows
+Join setup in 0.0182s (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-part join
+
+Joining lineorder ⋈ customer
+Join computed in 1.7976s (GPU time), transferred to CPU in 13.3599s, result has 59,986,217 rows
+Join setup in 0.0221s (GPU time), result has 59,986,217 rows
+Memory cleaned after lineorder-customer join
+
+Completed SF10 processing at 2026-09-13 11:42:49.736008
+
+========================================
+Processing SF100 at 2026-09-13 11:42:49.736096
+========================================
+Error loading /nonexistent_phase1/sf100/lineorder.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/date.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/customer.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/supplier.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+Error loading /nonexistent_phase1/sf100/part.tbl: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: An error occurred while calling the read_csv method registered to the cudf backend.
+Original Message: A file in: [] does not exist.
+
+Joining lineorder ⋈ customer
+
+Joining lineorder ⋈ date
+
+Joining lineorder ⋈ supplier
+
+Joining lineorder ⋈ part
+
+Joining lineorder ⋈ customer
+
+Completed SF100 processing at 2026-09-13 11:42:49.786700
+### BestGPUReport.py  end 2026-09-13 11:42:54  rc=0

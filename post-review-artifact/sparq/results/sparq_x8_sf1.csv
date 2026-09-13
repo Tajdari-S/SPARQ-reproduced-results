@@ -1,0 +1,5 @@
+sf,geometry,table,col,last_read_cycle,ns,plotted_ns,ratio
+1,x8,customer,C2,1190396,743997.5,743997.5,1.00
+1,x8,part,C3,1722862,1076788.8,1076788.75,1.00
+1,x8,supplier,C4,1549144,968215.0,968215,1.00
+1,x8,date,C5,1222605,764128.1,764128.125,1.00
