@@ -7,7 +7,7 @@ directory answers both, with the scripts, data and logs behind each answer.
 | reviewer point | directory | finding |
 |---|---|---|
 | Figure 7: SPARQ bars come out 0.82x, 0.91x and 0.55x of the plotted SF1 values | [`sparq/`](sparq/) | The bars were simulated with a DDR4 **x8** geometry; `02-sparq/` ships **x16**. Both reproduce exactly. The x8 setup here regenerates all 8 SF1/SF10 bars cycle-for-cycle. |
-| Figure 10: the GPU timer included the CSV read, and an H100 takes ~99 ms with it outside (12x, not 220x) | [`gpu/`](gpu/) | The timer could include loading. Fixed, and re-measured with one run type at every scale factor: 0.68-1.65x the plotted values, SPARQ still 118-223x faster at SF1/SF10. The reviewer's 99 ms is an in-memory join (SPARQ 12-84x faster), which cannot run SF100. |
+| Figure 10: the GPU timer included the CSV read, and an H100 takes ~99 ms with it outside (12x, not 220x) | [`gpu/`](gpu/) | The timer could include loading. Fixed, and re-measured with one run type at every scale factor: 0.68-1.65x the plotted values, SPARQ still 118-223x faster at SF1/SF10. The reviewer's 99 ms is an in-memory join (SPARQ 15-66x faster than it), which cannot run SF100. |
 
 ## SPARQ (Figures 7 and 10)
 

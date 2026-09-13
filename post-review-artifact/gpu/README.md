@@ -20,7 +20,8 @@
    runs), and SPARQ's speedup over the GPU stays 118-223x at SF1 and SF10.
 3. **The reviewer's 99 ms is a different run type**: an in-memory cuDF join. It is
    faster when the data fits in GPU memory (45-50 ms at SF1, 186-451 ms at SF10 on
-   our A100, i.e. SPARQ 12-84x faster), but it cannot run SF100. The paper's GPU
+   our A100; SPARQ is 15-66x faster than it against the paper's x8 bars), but it
+   cannot run SF100. The paper's GPU
    baseline uses one out-of-core configuration at every scale factor, and the
    camera-ready should say so and report the in-memory numbers alongside.
 
@@ -90,8 +91,9 @@ inside its timer.
 
 ### SPARQ speedup over the GPU
 
-GPU latency divided by SPARQ latency. "x8" is the SPARQ bars as plotted, "x16" the
-geometry `02-sparq/` ships; see [`../sparq/`](../sparq/).
+GPU latency divided by SPARQ latency. "x8" is the SPARQ bars as plotted, which is the
+configuration the paper describes; "x16" is the geometry `02-sparq/` shipped. See
+[`../sparq/`](../sparq/).
 
 | | paper | load outside timer, x8 | load outside timer, x16 | in-memory cuDF, x8 / x16 |
 |---|---:|---:|---:|---:|
