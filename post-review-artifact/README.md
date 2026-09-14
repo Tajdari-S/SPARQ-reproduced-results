@@ -53,6 +53,8 @@ Requires `NUMBA_CUDA_USE_NVIDIA_BINDING=1` on current NVIDIA drivers (set by
    paper describes (Section 5.1, tCCD ≈ 2.5 ns), and `sparq/` reproduces them exactly.
 2. **Figure 10 GPU bars:** re-plot from
    [`gpu/results/gpu_uniform_results.csv`](gpu/results/gpu_uniform_results.csv).
+   [`figures/`](figures/) has Figure 10 and the GPU speedup figure redrawn with
+   these values, and notes two CPU values that disagree between figure scripts.
 3. **Section 5.2.3:** state that the GPU baseline uses dask-cuDF with 256 MiB
    partitions at every scale factor because SF100 exceeds device memory; that
    loading, parsing and result transfer are outside the timed region; and that an
