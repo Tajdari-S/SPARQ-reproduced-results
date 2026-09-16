@@ -15,6 +15,7 @@ Q = ["Q1.1", "Q1.2", "Q1.3", "Q2.1", "Q2.2", "Q2.3", "Q3.1", "Q3.2", "Q3.3", "Q3
 # Figure 11 as plotted (figures_generation/Fig11.py in the full artifact), seconds
 PLOT_DUCKDB_WARM = [0.147667414, 0.09488183875, 0.1035408065, 0.21365058825, 0.18315722, 0.169013347, 0.4223779015, 0.275773053, 0.305143238, 0.19015059325, 0.4224444615, 0.36970307, 0.24304288575]
 PLOT_SPARQ_WARM = [0.131676256443981, 0.0854609603226451, 0.0948416257786857, 0.0945870769466617, 0.087656818770166, 0.0841820583798497, 0.212444749790514, 0.0639915316298561, 0.128318381054703, 0.00709454572504574, 0.140006696662751, 0.0803504101109045, 0.0276646439095934]
+PLOT_SPARQ_WARM_JOIN = [0.0015175297731125, 5.36332252614584e-05, 5.21960648895834e-05, 0.0859208417344857, 0.0827987392046108, 0.0820058833645087, 0.139958143301651, 0.0584083251703931, 0.125310021514597, 0.00177243414969974, 0.114090822792311, 0.0385300965176815, 0.0205878913079511]
 PLOT_DUCKDB_WARM_JOIN = [0.0177190976766479, 0.00958355579094849, 0.00879027399655515, 0.204986315382846, 0.178283177769396, 0.166866927963085, 0.349890527024363, 0.270202121190566, 0.302117394481474, 0.184985621131857, 0.396231329930058, 0.327845941751651, 0.235984450087825]
 
 
@@ -60,17 +61,17 @@ def main():
     tb = sum(st.median(r[q] for r in mem1) for q in Q)
     print(f"geomean change {100*(gm(ratios)-1):+.1f}%, total {ta:.2f}s -> {tb:.2f}s ({100*(tb/ta-1):+.1f}%)")
 
-    # Figure 11: scale each query's plotted DuckDB time, and the non-join part of
-    # its SPARQ bar, by the measured ratio. SPARQ's own join time is simulated and
-    # does not depend on where DuckDB's memory lives.
+    # Figure 11: SPARQ bar = DuckDB - DuckDB join + SPARQ join (Section 5.2.5).
+    # Scale each query's plotted DuckDB time, join included, by the measured ratio;
+    # SPARQ's join time is simulated and does not depend on where DuckDB's memory lives.
     s0, s1 = [], []
     for i, r in enumerate(ratios):
-        d, s, dj = PLOT_DUCKDB_WARM[i], PLOT_SPARQ_WARM[i], PLOT_DUCKDB_WARM_JOIN[i]
-        sparq_join = s - (d - dj)
-        s0.append(d / s)
-        s1.append(d * r / ((d - dj) * r + sparq_join))
-        rows[i].update(speedup_plotted=round(s0[-1], 2), speedup_membind=round(s1[-1], 2))
-    print(f"\nFigure 11 warm speedup: plotted {min(s0):.2f}-{max(s0):.1f}x (geomean {gm(s0):.2f}x), "
+        d, s, dj, sj = (PLOT_DUCKDB_WARM[i], PLOT_SPARQ_WARM[i],
+                        PLOT_DUCKDB_WARM_JOIN[i], PLOT_SPARQ_WARM_JOIN[i])
+        s0.append(d / (d - dj + sj))            # r = 1: the formula on the plotted values
+        s1.append(d * r / (d * r - dj * r + sj))
+        rows[i].update(speedup_unbound=round(s0[-1], 2), speedup_membind=round(s1[-1], 2))
+    print(f"\nFigure 11 warm speedup (formula): unbound {min(s0):.2f}-{max(s0):.1f}x (geomean {gm(s0):.2f}x), "
           f"memory on one socket {min(s1):.2f}-{max(s1):.1f}x (geomean {gm(s1):.2f}x)")
     with open(os.path.join(RES, "membind_summary.csv"), "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0]))

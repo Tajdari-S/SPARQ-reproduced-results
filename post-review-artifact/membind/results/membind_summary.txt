@@ -18,5 +18,5 @@ Q4.2       305ms     342ms     +12%       6%
 Q4.3       191ms     201ms      +6%       4%
 geomean change +8.6%, total 2.43s -> 2.66s (+9.2%)
 
-Figure 11 warm speedup: plotted 1.09-26.8x (geomean 2.86x), memory on one socket 1.09-26.9x (geomean 2.94x)
+Figure 11 warm speedup (formula): unbound 1.09-27.4x (geomean 2.87x), memory on one socket 1.09-27.5x (geomean 2.95x)
 -> results/membind_summary.csv

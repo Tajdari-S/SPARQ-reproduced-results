@@ -14,9 +14,11 @@ memory (8 channels), with CPU threads left unrestricted?
   roughly 55/50 GB across the two nodes).
 - **DuckDB is 8.6% slower** (geomean of warm latency over the 13 queries; total
   2.43 s to 2.66 s).
-- **Figure 11's warm speedups barely move:** 1.09x-26.8x (geomean 2.86x) as
-  plotted, 1.09x-26.9x (geomean 2.94x) with memory on one socket. The extra cost
-  lands on both the DuckDB bar and the non-join part of the SPARQ bar.
+- **Figure 11's warm speedups barely move:** 1.09x-27.4x (geomean 2.87x)
+  unbound, 1.09x-27.5x (geomean 2.95x) with memory on one socket. No query's
+  speedup falls; the largest change is Q4.1, 3.01x to 3.40x. The extra cost lands
+  on the DuckDB bar and on the non-join part of the SPARQ bar, but not on SPARQ's
+  simulated join.
 
 ## Results
 
@@ -56,10 +58,13 @@ Q3.x changes are within it.
   (0.77x in total), where one process per query gave 1.08x in total (full
   artifact, `artifact_submission/REPRODUCTION_STATUS.md`). **Compare the two modes
   with each other, not with the plotted values**; both modes use the same method.
-- **Figure 11 estimate.** Each query's plotted DuckDB time, and the non-join part
-  of its SPARQ bar, are scaled by that query's measured ratio; SPARQ's simulated
-  join time is unchanged. This assumes the join and non-join parts slow down
-  equally, because the profiles do not let us recover how the paper split them.
+- **Figure 11 estimate.** Section 5.2.5's formula, SPARQ bar = DuckDB − DuckDB
+  join + SPARQ join, applied to `Fig11.py`'s warm arrays with each query's DuckDB
+  time and DuckDB join time scaled by that query's measured ratio r. SPARQ's
+  simulated join time is unchanged. This assumes DuckDB's join and non-join parts
+  slow down by the same r. Both speedup ranges use the formula; as drawn, Q3.4's
+  SPARQ warm bar is 0.16 ms above it, so the plotted maximum is 26.8x rather than
+  27.4x.
 - **CPU threads are not restricted** in either mode: DuckDB uses all 112 hardware
   threads.
 
