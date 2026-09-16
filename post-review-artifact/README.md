@@ -18,6 +18,7 @@ join as the corrected GPU baseline; the baseline the paper uses is the one in
 | Fig. 7 / Sec. 5.2.2: `-O0`; Table 2 wording | [`PAPER_CHANGES.md`](PAPER_CHANGES.md) §4 | Both fixed in the text. |
 | ssb-dbgen pin does not exist; does not build | [`dataset/`](dataset/) | Correct on both counts, plus an intermittent crash. Fork, pin and a small patch (8 insertions, 2 deletions) that builds with GCC 14 and leaves the output byte-identical. |
 | CPU configuration and DuckDB version per figure | [`PAPER_CHANGES.md`](PAPER_CHANGES.md) §6 | Per-figure table. The published CPU baselines were not pinned to one socket. |
+| (follow-up) Fig. 11 with DuckDB's memory on one socket's 8 channels | [`membind/`](membind/) | DuckDB is 8.6% slower (warm geomean); Figure 11's warm speedups barely move (1.09-26.8x to 1.09-26.9x). |
 | Zenodo DOI for the final version | [`PAPER_CHANGES.md`](PAPER_CHANGES.md) §8 | To be deposited once this directory is final. |
 
 ## Quick checks
@@ -48,4 +49,5 @@ needs on NVIDIA driver 580 or later; see [`gpu/README.md`](gpu/README.md#environ
 | [`figures/`](figures/) | Figure 10 and the GPU speedup figure redrawn with the corrected GPU values |
 | [`tcmp/`](tcmp/) | comparator-delay sweep on both geometries, and the original July 2025 sweep |
 | [`dataset/`](dataset/) | SSB generator build script and patch |
+| [`membind/`](membind/) | Figure 11 queries with DuckDB's memory bound to one socket |
 | [`PAPER_CHANGES.md`](PAPER_CHANGES.md) | replacement text for the camera-ready, item by item |

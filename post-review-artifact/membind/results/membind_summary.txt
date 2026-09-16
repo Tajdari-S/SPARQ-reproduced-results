@@ -1,0 +1,22 @@
+repetitions: unbound 3, memory bound to node 1 3
+peak DuckDB memory, mem1: node 0 0.0 GB, node 1 106.9 GB
+peak DuckDB memory, none: node 0 58.5 GB, node 1 51.4 GB
+
+warm     unbound     bound   change   spread
+Q1.1       134ms     179ms     +34%       3%
+Q1.2       131ms     153ms     +17%       2%
+Q1.3       132ms     151ms     +14%       3%
+Q2.1       161ms     166ms      +3%       3%
+Q2.2       155ms     160ms      +3%      27%
+Q2.3       113ms     113ms      +0%      11%
+Q3.1       375ms     391ms      +4%       8%
+Q3.2       162ms     165ms      +2%      19%
+Q3.3       109ms     113ms      +4%       5%
+Q3.4       110ms     111ms      +1%       5%
+Q4.1       354ms     412ms     +16%       3%
+Q4.2       305ms     342ms     +12%       6%
+Q4.3       191ms     201ms      +6%       4%
+geomean change +8.6%, total 2.43s -> 2.66s (+9.2%)
+
+Figure 11 warm speedup: plotted 1.09-26.8x (geomean 2.86x), memory on one socket 1.09-26.9x (geomean 2.94x)
+-> results/membind_summary.csv
