@@ -9,12 +9,20 @@ import dask
 import cupy as cp
 import os
 
-# Data locations. Defaults are the paths the paper's measurements used. The SF100
-# copy is comma-separated with quoted dates; set SF100_SEP='|' for dbgen output.
+# Data locations. Defaults are the paths the paper's measurements used: SF1/SF10
+# are '|'-separated, SF100 is comma-separated with quoted fields.
 SF1_DIR = os.environ.get('SF1_DIR', '/p/pd/pim/sf1/')
 SF10_DIR = os.environ.get('SF10_DIR', '/p/pd/pim/sf10/')
 SF100_DIR = os.environ.get('SF100_DIR', '/p/pd/ssb-dbgen/sf100/')
-SF100_SEP = os.environ.get('SF100_SEP', ',')
+SSB_SEP = os.environ.get('SSB_SEP')   # optional override of the detected separator
+
+def detect_sep(file_path):
+    """'|' for classic dbgen output, ',' for the ClickHouse-style CSV of
+    vadimtk/ssb-dbgen. Only the parser changes; nothing inside the timer does."""
+    if SSB_SEP:
+        return SSB_SEP
+    with open(file_path) as f:
+        return '|' if '|' in f.readline() else ','
 
 def initialize_dask():
     """Initialize Dask with CUDA cluster and RMM memory pool."""
@@ -35,10 +43,10 @@ def initialize_dask():
 def load_table(file_path, column_names, blocksize):
     """Load table with optimized partitioning."""
     try:
-        if file_path.startswith(SF100_DIR):
+        if 'sf100' in file_path or file_path.startswith(SF100_DIR):
             df = dask_cudf.read_csv(
                 file_path,
-                sep=SF100_SEP,
+                sep=detect_sep(file_path),
                 names=column_names,
                 blocksize=blocksize,  # Smaller blocksize for sf100 (e.g., 256 MiB)
                 dtype='int32'
@@ -46,7 +54,7 @@ def load_table(file_path, column_names, blocksize):
         else:
             df = dask_cudf.read_csv(
                 file_path,
-                sep='|',
+                sep=detect_sep(file_path),
                 names=column_names,
                 blocksize=blocksize,  # Larger blocksize for sf1/sf10 (e.g., 1024 MiB)
                 dtype='int32'

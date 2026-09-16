@@ -1,0 +1,68 @@
+diff --git a/bm_utils.c b/bm_utils.c
+index 5da29a0..fa8df76 100644
+--- a/bm_utils.c
++++ b/bm_utils.c
+@@ -130,7 +130,8 @@ yes_no(char *prompt)
+ #pragma warning(default:4127)
+ #endif 
+         printf("%s [Y/N]: ", prompt);
+-        gets(reply);
++        if (fgets(reply, sizeof(reply), stdin) == NULL)
++            reply[0] = '\0';
+         switch (*reply)
+             {
+             case 'y':
+@@ -369,6 +370,8 @@ tbl_open(int tbl, char *mode)
+             env_config(PATH_TAG, PATH_DFLT), PATH_SEP, tdefs[tbl].name);
+ 
+     retcode = stat(fullpath, &fstats);
++    if (retcode)   /* fstats is not filled in when the file does not exist yet */
++        memset(&fstats, 0, sizeof(fstats));
+     if (retcode && (errno != ENOENT))
+         {
+         fprintf(stderr, "stat(%s) failed.\n", fullpath);
+@@ -384,7 +387,7 @@ tbl_open(int tbl, char *mode)
+     if (S_ISFIFO(fstats.st_mode))
+         {
+         retcode =
+-            open(fullpath, ((*mode == 'r')?O_RDONLY:O_WRONLY)|O_CREAT);
++            open(fullpath, ((*mode == 'r')?O_RDONLY:O_WRONLY)|O_CREAT, 0644);
+         f = fdopen(retcode, mode);
+         }
+     else{
+diff --git a/config.h b/config.h
+index 91833cb..88f361e 100644
+--- a/config.h
++++ b/config.h
+@@ -98,6 +98,7 @@
+ 
+ #ifdef LINUX
+ #define STDLIB_HAS_GETOPT
++#include <unistd.h>   /* getopt, getpid: implicit declarations are errors from GCC 14 */
+ #endif /* LINUX */
+ 
+ #ifdef MAC
+diff --git a/load_stub.c b/load_stub.c
+index e3339b5..c2c552a 100644
+--- a/load_stub.c
++++ b/load_stub.c
+@@ -138,6 +138,7 @@ ld_order (order_t *p, int mode)
+     return(0);
+ }
+ 
++int
+ ld_line (order_t *p, int mode)
+ {
+     static int count = 0;
+diff --git a/qgen.c b/qgen.c
+index 7931f8a..f943184 100644
+--- a/qgen.c
++++ b/qgen.c
+@@ -385,6 +385,7 @@ setup(void)
+ }
+ 
+ 
++int
+ main(int ac, char **av)
+ {
+     int i;

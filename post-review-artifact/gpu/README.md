@@ -48,7 +48,8 @@ the tables to finish loading. The complete change against the original
 ([`original/BestGPU.py`](original/BestGPU.py)):
 
 ```diff
-+SF1_DIR / SF10_DIR / SF100_DIR / SF100_SEP  environment overrides (defaults: the paper's paths)
++SF1_DIR / SF10_DIR / SF100_DIR  environment overrides (defaults: the paper's paths)
++detect_sep(): '|' or ',' per file (the original hard-codes '|' below SF100, ',' at SF100)
 -        protocol="ucx",
 +        protocol="tcp",
 -        ('1', '/p/pd/pim/sf1/', True, "1024 MiB"),
@@ -109,12 +110,13 @@ In-memory numbers are [`03-gpu/results/gpu_join_bench.csv`](../../03-gpu/results
 ```bash
 conda activate rapids            # RAPIDS 24.12, see 03-gpu/README.md
 RAPIDS_PYTHON=$(which python) \
-SF1_DIR=/data/ssb/sf1/ SF10_DIR=/data/ssb/sf10/ SF100_DIR=/data/ssb/sf100/ SF100_SEP='|' \
+SF1_DIR=/data/ssb/sf1/ SF10_DIR=/data/ssb/sf10/ SF100_DIR=/data/ssb/sf100/ \
 bash scripts/run.sh              # 3 repetitions, ~14 min each, then rebuilds the tables
 ```
 
-`SF100_SEP` defaults to `,` because our SF100 copy is comma-separated; set it to
-`|` for `dbgen` output. `REPS=1` runs once. `python3 scripts/make_tables.py`
+The field separator is detected per file (`|` for classic dbgen output, `,` for
+the CSV that [`../dataset/`](../dataset/) produces); `SSB_SEP` overrides it. Dates
+must be `YYYYMMDD` integers, which that recipe produces. `REPS=1` runs once. `python3 scripts/make_tables.py`
 rebuilds the tables from whatever logs are in `results/logs/`.
 
 To repeat the version sweep: `SRC=/path/to/gpu/scripts bash scripts/sweep_versions.sh`

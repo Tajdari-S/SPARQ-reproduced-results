@@ -1,0 +1,54 @@
+x16 re-simulation vs July 2025 sweep: 30/30 identical
+
+Paper, Sec. 5.3.4: +11% at tCMP=1, +32% average at tCMP=4, max +61% (customer SF1)
+
+x8 (the configuration of Figures 7 and 10), completion cycle
+                      tCMP=1    tCMP=2    tCMP=3    tCMP=4
+  customer SF1          0.8%      0.9%     49.3%     53.9%
+  part SF1              1.0%      1.5%     33.8%     37.2%
+  supplier SF1         21.9%     22.0%     44.0%     45.2%
+  date SF1             12.5%     12.5%     45.9%     49.7%
+  customer SF10         0.8%      1.2%     33.8%     37.9%
+  part SF10             0.1%      0.0%     18.3%     21.5%
+  supplier SF10         1.4%      1.2%     50.3%     50.9%
+  date SF10            12.5%     12.5%     46.0%     49.7%
+  customer SF100        0.8%      0.6%     49.1%     53.7%
+  part SF100            0.8%      1.0%     40.5%     43.2%
+  supplier SF100        0.8%      1.1%     40.4%     43.1%
+  date SF100           12.6%     12.5%     46.0%     49.7%
+  average               5.5%      5.6%     41.4%     44.6%   (12 joins)
+  max at tCMP=4: 53.9% (customer SF1)
+
+x16 (the July 2025 sweep), completion cycle
+                      tCMP=1    tCMP=2    tCMP=3    tCMP=4
+  customer SF1         34.2%     38.8%     46.0%     61.3%
+  part SF1             14.8%     20.1%     26.7%     36.3%
+  supplier SF1         87.6%     88.7%     94.3%    139.4%
+  customer SF10        15.7%     21.4%     28.1%     37.7%
+  part SF10             0.4%      0.7%      1.6%      3.2%
+  supplier SF10        27.6%     29.2%     39.6%     53.5%
+  customer SF100       34.3%     38.8%     46.0%     61.1%
+  part SF100           21.5%     26.8%     34.3%     45.6%
+  supplier SF100       21.3%     26.4%     33.8%     45.1%
+  average              28.6%     32.3%     38.9%     53.7%   (9 joins)
+  max at tCMP=4: 139.4% (supplier SF1)
+
+x16, average_read_latency (the metric the old getting_started.sh used)
+                      tCMP=1    tCMP=2    tCMP=3    tCMP=4
+  customer SF1          3.7%      2.6%      8.0%     17.7%
+  part SF1             -1.6%     -2.9%     -1.9%      0.8%
+  supplier SF1         47.4%     31.9%     49.7%     80.6%
+  customer SF10        -1.0%     -2.2%     -1.0%      2.0%
+  part SF10             0.1%      0.2%      0.4%      0.7%
+  supplier SF10        -1.3%     -2.4%      3.7%     12.0%
+  customer SF100        4.4%      3.2%      8.6%     18.1%
+  part SF100           -5.2%     -6.7%     -5.0%     -0.9%
+  supplier SF100       -5.3%     -6.9%     -5.2%     -1.2%
+  average               4.6%      1.9%      6.4%     14.4%   (9 joins)
+  max at tCMP=4: 80.6% (supplier SF1)
+
+SPARQ speedup over DuckDB (x8): 405x-1001x at tCMP=0, 295x-651x at tCMP=4 (paper: 400x-1000x -> 324x-916x)
+  with customer SF100 CPU = 46,291 ms (Figs. 7/10): 405x-662x -> 295x-442x
+
+-> results/tcmp_summary.csv
+direction check: PASS (latency never falls below tCMP=0)

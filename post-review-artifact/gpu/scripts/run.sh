@@ -5,6 +5,8 @@
 #   RAPIDS_PYTHON=/myenv/rapids_env/bin/python bash run.sh          # 3 repetitions
 #   REPS=1 SF1_DIR=/data/sf1/ SF10_DIR=/data/sf10/ SF100_DIR=/data/sf100/ bash run.sh
 #
+# The separator ('|' or ',') is detected per file; SSB_SEP overrides it.
+#
 # ~14 minutes per repetition on an A100 40 GB with the data page-cached, almost
 # all of it SF100. Writes results/logs/uniform_loadfixed_rep<N>.log and rebuilds
 # results/gpu_uniform_results.csv from every rep log present.
@@ -17,7 +19,6 @@ WORK="${WORK:-/tmp/sparq_gpu_post_review}"
 export SF1_DIR="${SF1_DIR:-/p/pd/pim/sf1/}"
 export SF10_DIR="${SF10_DIR:-/p/pd/pim/sf10/}"
 export SF100_DIR="${SF100_DIR:-/p/pd/ssb-dbgen/sf100/}"
-export SF100_SEP="${SF100_SEP:-,}"
 # numba-cuda 0.0.17 (RAPIDS 24.12) segfaults on driver 580 / CUDA 13 without this
 export NUMBA_CUDA_USE_NVIDIA_BINDING=1 PYTHONUNBUFFERED=1
 
