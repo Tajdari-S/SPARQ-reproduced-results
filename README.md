@@ -12,9 +12,7 @@ re-measure each one.
 > **After artifact evaluation:** see [`post-review-artifact/`](post-review-artifact/).
 > The SPARQ bars in Figures 7 and 10 were simulated with a DDR4 x8 geometry, while
 > `02-sparq/` ships x16; both now reproduce exactly. The GPU baseline has been
-> re-measured with loading outside the timer and one run type at every scale factor,
-> the comparator-delay sweep re-run, and the SSB generator pinned and patched. That
-> directory supersedes the GPU numbers in `03-gpu/` and `RESULTS.md`.
+> re-measured with loading outside the timer and one run type at every scale factor.
 
 This repository is the *results* half: the three measured components, the
 commands to reproduce each, and the values we obtained. The simulator source,
