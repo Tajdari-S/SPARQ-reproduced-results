@@ -1,0 +1,297 @@
+{
+    "query_name": "select customer.city, supplier.city, year, sum(lineorder.revenue) as revenue from customer, lineorder, supplier, date where lineorder.custkey = customer.custkey and lineorder.suppkey = supplier.suppkey and lineorder.orderdate = date.datekey and customer.nation = 'UNITED STATES' and supplier.nation = 'UNITED STATES' and year >= 1992 and year <= 1997 group by customer.city, supplier.city, year order by year asc, revenue desc;",
+    "cpu_time": 92.09084601499985,
+    "extra_info": {},
+    "result_set_size": 33600,
+    "blocked_thread_time": 0.0,
+    "latency": 0.919730564,
+    "rows_returned": 600,
+    "children": [
+        {
+            "operator_type": "PROJECTION",
+            "cpu_time": 92.09084601499985,
+            "extra_info": {
+                "Projections": [
+                    "__internal_decompress_string(#0)",
+                    "__internal_decompress_string(#1)",
+                    "__internal_decompress_integral_bigint(#2, 1992)",
+                    "#3"
+                ],
+                "Estimated Cardinality": "263"
+            },
+            "operator_rows_scanned": 0,
+            "operator_cardinality": 600,
+            "operator_timing": 0.000106315,
+            "result_set_size": 33600,
+            "children": [
+                {
+                    "operator_type": "ORDER_BY",
+                    "cpu_time": 92.09073969999986,
+                    "extra_info": {
+                        "Order By": [
+                            "date.\"year\" ASC",
+                            "sum(lineorder.revenue) DESC"
+                        ]
+                    },
+                    "operator_rows_scanned": 0,
+                    "operator_cardinality": 600,
+                    "operator_timing": 0.022854153,
+                    "result_set_size": 29400,
+                    "children": [
+                        {
+                            "operator_type": "PROJECTION",
+                            "cpu_time": 92.06788554699986,
+                            "extra_info": {
+                                "Projections": [
+                                    "__internal_compress_string_hugeint(#0)",
+                                    "__internal_compress_string_hugeint(#1)",
+                                    "__internal_compress_integral_utinyint(#2, 1992)",
+                                    "#3"
+                                ],
+                                "Estimated Cardinality": "263"
+                            },
+                            "operator_rows_scanned": 0,
+                            "operator_cardinality": 600,
+                            "operator_timing": 0.000051212,
+                            "result_set_size": 29400,
+                            "children": [
+                                {
+                                    "operator_type": "PROJECTION",
+                                    "cpu_time": 92.06783433499986,
+                                    "extra_info": {
+                                        "Projections": [
+                                            "__internal_decompress_string(#0)",
+                                            "__internal_decompress_string(#1)",
+                                            "__internal_decompress_integral_bigint(#2, 1992)",
+                                            "#3"
+                                        ],
+                                        "Estimated Cardinality": "263"
+                                    },
+                                    "operator_rows_scanned": 0,
+                                    "operator_cardinality": 600,
+                                    "operator_timing": 0.000068239,
+                                    "result_set_size": 33600,
+                                    "children": [
+                                        {
+                                            "operator_type": "HASH_GROUP_BY",
+                                            "cpu_time": 92.06776609599986,
+                                            "extra_info": {
+                                                "Groups": [
+                                                    "#0",
+                                                    "#1",
+                                                    "#2"
+                                                ],
+                                                "Aggregates": "sum(#3)",
+                                                "Estimated Cardinality": "263"
+                                            },
+                                            "operator_rows_scanned": 0,
+                                            "operator_cardinality": 600,
+                                            "operator_timing": 1.2849711450000003,
+                                            "result_set_size": 29400,
+                                            "children": [
+                                                {
+                                                    "operator_type": "PROJECTION",
+                                                    "cpu_time": 90.78279495099986,
+                                                    "extra_info": {
+                                                        "Projections": [
+                                                            "city",
+                                                            "city",
+                                                            "year",
+                                                            "revenue"
+                                                        ],
+                                                        "Estimated Cardinality": "325091"
+                                                    },
+                                                    "operator_rows_scanned": 0,
+                                                    "operator_cardinality": 875702,
+                                                    "operator_timing": 0.004896314999999999,
+                                                    "result_set_size": 35903782,
+                                                    "children": [
+                                                        {
+                                                            "operator_type": "PROJECTION",
+                                                            "cpu_time": 90.77789863599986,
+                                                            "extra_info": {
+                                                                "Projections": [
+                                                                    "__internal_compress_integral_uinteger(#0, 1)",
+                                                                    "__internal_compress_integral_uinteger(#1, 1)",
+                                                                    "__internal_compress_integral_usmallint(#2, 19920101)",
+                                                                    "#3",
+                                                                    "__internal_compress_integral_uinteger(#4, 1)",
+                                                                    "__internal_compress_string_hugeint(#5)",
+                                                                    "__internal_compress_integral_uinteger(#6, 1)",
+                                                                    "__internal_compress_string_hugeint(#7)",
+                                                                    "__internal_compress_integral_usmallint(#8, 19920101)",
+                                                                    "__internal_compress_integral_utinyint(#9, 1992)"
+                                                                ],
+                                                                "Estimated Cardinality": "325091"
+                                                            },
+                                                            "operator_rows_scanned": 0,
+                                                            "operator_cardinality": 875702,
+                                                            "operator_timing": 0.22439825399999994,
+                                                            "result_set_size": 53417822,
+                                                            "children": [
+                                                                {
+                                                                    "operator_type": "HASH_JOIN",
+                                                                    "cpu_time": 90.55350038199987,
+                                                                    "extra_info": {
+                                                                        "Join Type": "INNER",
+                                                                        "Conditions": "orderdate = datekey",
+                                                                        "Build Min": "19920101",
+                                                                        "Build Max": "19980802",
+                                                                        "Estimated Cardinality": "325091"
+                                                                    },
+                                                                    "operator_rows_scanned": 0,
+                                                                    "operator_cardinality": 875702,
+                                                                    "operator_timing": 0.04956944800000001,
+                                                                    "result_set_size": 84067392,
+                                                                    "children": [
+                                                                        {
+                                                                            "operator_type": "HASH_JOIN",
+                                                                            "cpu_time": 90.50378411499987,
+                                                                            "extra_info": {
+                                                                                "Join Type": "INNER",
+                                                                                "Conditions": "suppkey = suppkey",
+                                                                                "Build Min": "1",
+                                                                                "Build Max": "200000",
+                                                                                "Estimated Cardinality": "1619732"
+                                                                            },
+                                                                            "operator_rows_scanned": 0,
+                                                                            "operator_cardinality": 875702,
+                                                                            "operator_timing": 9.141102649,
+                                                                            "result_set_size": 70056160,
+                                                                            "children": [
+                                                                                {
+                                                                                    "operator_type": "HASH_JOIN",
+                                                                                    "cpu_time": 81.34875047599986,
+                                                                                    "extra_info": {
+                                                                                        "Join Type": "INNER",
+                                                                                        "Conditions": "custkey = custkey",
+                                                                                        "Estimated Cardinality": "30193756"
+                                                                                    },
+                                                                                    "operator_rows_scanned": 0,
+                                                                                    "operator_cardinality": 21794434,
+                                                                                    "operator_timing": 24.493369418999873,
+                                                                                    "result_set_size": 1220488304,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "operator_type": "TABLE_SCAN",
+                                                                                            "cpu_time": 56.509355160999995,
+                                                                                            "extra_info": {
+                                                                                                "Text": "lineorder",
+                                                                                                "Projections": [
+                                                                                                    "custkey",
+                                                                                                    "suppkey",
+                                                                                                    "orderdate",
+                                                                                                    "revenue"
+                                                                                                ],
+                                                                                                "Estimated Cardinality": "600037902"
+                                                                                            },
+                                                                                            "operator_rows_scanned": 67204245024,
+                                                                                            "operator_cardinality": 546548265,
+                                                                                            "operator_timing": 56.509355160999995,
+                                                                                            "result_set_size": 17489544480,
+                                                                                            "children": []
+                                                                                        },
+                                                                                        {
+                                                                                            "operator_type": "FILTER",
+                                                                                            "cpu_time": 0.346025896,
+                                                                                            "extra_info": {
+                                                                                                "Expression": "(custkey <= 2999999)",
+                                                                                                "Estimated Cardinality": "150000"
+                                                                                            },
+                                                                                            "operator_rows_scanned": 0,
+                                                                                            "operator_cardinality": 120077,
+                                                                                            "operator_timing": 0.028250325,
+                                                                                            "result_set_size": 2881848,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "operator_type": "TABLE_SCAN",
+                                                                                                    "cpu_time": 0.317775571,
+                                                                                                    "extra_info": {
+                                                                                                        "Text": "customer",
+                                                                                                        "Projections": [
+                                                                                                            "custkey",
+                                                                                                            "city"
+                                                                                                        ],
+                                                                                                        "Filters": "nation='UNITED STATES' AND nation IS NOT NULL",
+                                                                                                        "Estimated Cardinality": "150000"
+                                                                                                    },
+                                                                                                    "operator_rows_scanned": 75000000,
+                                                                                                    "operator_cardinality": 120077,
+                                                                                                    "operator_timing": 0.317775571,
+                                                                                                    "result_set_size": 2881848,
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "operator_type": "TABLE_SCAN",
+                                                                                    "cpu_time": 0.01393099,
+                                                                                    "extra_info": {
+                                                                                        "Text": "supplier",
+                                                                                        "Projections": [
+                                                                                            "suppkey",
+                                                                                            "city"
+                                                                                        ],
+                                                                                        "Filters": "nation='UNITED STATES' AND nation IS NOT NULL",
+                                                                                        "Estimated Cardinality": "10000"
+                                                                                    },
+                                                                                    "operator_rows_scanned": 400000,
+                                                                                    "operator_cardinality": 8043,
+                                                                                    "operator_timing": 0.01393099,
+                                                                                    "result_set_size": 193032,
+                                                                                    "children": []
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "operator_type": "FILTER",
+                                                                            "cpu_time": 0.00014681900000000002,
+                                                                            "extra_info": {
+                                                                                "Expression": "(datekey <= 19980802)",
+                                                                                "Estimated Cardinality": "511"
+                                                                            },
+                                                                            "operator_rows_scanned": 0,
+                                                                            "operator_cardinality": 2192,
+                                                                            "operator_timing": 0.000051976,
+                                                                            "result_set_size": 35072,
+                                                                            "children": [
+                                                                                {
+                                                                                    "operator_type": "TABLE_SCAN",
+                                                                                    "cpu_time": 0.00009484300000000001,
+                                                                                    "extra_info": {
+                                                                                        "Text": "date",
+                                                                                        "Projections": [
+                                                                                            "datekey",
+                                                                                            "year"
+                                                                                        ],
+                                                                                        "Filters": "year>=1992 AND year<=1997 AND year IS NOT NULL",
+                                                                                        "Estimated Cardinality": "511"
+                                                                                    },
+                                                                                    "operator_rows_scanned": 2556,
+                                                                                    "operator_cardinality": 2192,
+                                                                                    "operator_timing": 0.00009484300000000001,
+                                                                                    "result_set_size": 35072,
+                                                                                    "children": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

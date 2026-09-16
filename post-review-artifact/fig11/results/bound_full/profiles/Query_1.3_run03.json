@@ -1,0 +1,109 @@
+{
+    "query_name": "select sum(extendedprice*discount) as revenue from lineorder, date where orderdate = datekey and weeknuminyear = 6 and year = 1994 and discount between 5 and 7 and quantity between 26 and 35;",
+    "cpu_time": 12.212746527999997,
+    "extra_info": {},
+    "result_set_size": 16,
+    "blocked_thread_time": 0.0,
+    "latency": 0.121661583,
+    "rows_returned": 1,
+    "children": [
+        {
+            "operator_type": "UNGROUPED_AGGREGATE",
+            "cpu_time": 12.212746527999997,
+            "extra_info": {
+                "Aggregates": "sum(#0)"
+            },
+            "operator_rows_scanned": 0,
+            "operator_cardinality": 1,
+            "operator_timing": 0.0014887919999999994,
+            "result_set_size": 16,
+            "children": [
+                {
+                    "operator_type": "PROJECTION",
+                    "cpu_time": 12.211257735999997,
+                    "extra_info": {
+                        "Projections": "(extendedprice * discount)",
+                        "Estimated Cardinality": "9285739"
+                    },
+                    "operator_rows_scanned": 0,
+                    "operator_cardinality": 409786,
+                    "operator_timing": 0.0031009069999999982,
+                    "result_set_size": 3278288,
+                    "children": [
+                        {
+                            "operator_type": "HASH_JOIN",
+                            "cpu_time": 12.208156828999996,
+                            "extra_info": {
+                                "Join Type": "INNER",
+                                "Conditions": "orderdate = datekey",
+                                "Build Min": "19920101",
+                                "Build Max": "19980802",
+                                "Estimated Cardinality": "9285739"
+                            },
+                            "operator_rows_scanned": 0,
+                            "operator_cardinality": 409786,
+                            "operator_timing": 0.9272549969999997,
+                            "result_set_size": 13113152,
+                            "children": [
+                                {
+                                    "operator_type": "TABLE_SCAN",
+                                    "cpu_time": 11.280850447999995,
+                                    "extra_info": {
+                                        "Text": "lineorder",
+                                        "Projections": [
+                                            "orderdate",
+                                            "discount",
+                                            "extendedprice"
+                                        ],
+                                        "Filters": [
+                                            "discount>=5 AND discount<=7 AND discount IS NOT NULL",
+                                            "quantity>=26 AND quantity<=35 AND quantity IS NOT NULL"
+                                        ],
+                                        "Estimated Cardinality": "120007580"
+                                    },
+                                    "operator_rows_scanned": 67204245024,
+                                    "operator_cardinality": 409786,
+                                    "operator_timing": 11.280850447999995,
+                                    "result_set_size": 9834864,
+                                    "children": []
+                                },
+                                {
+                                    "operator_type": "FILTER",
+                                    "cpu_time": 0.000051383999999999995,
+                                    "extra_info": {
+                                        "Expression": "(datekey <= 19980802)",
+                                        "Estimated Cardinality": "197"
+                                    },
+                                    "operator_rows_scanned": 0,
+                                    "operator_cardinality": 30,
+                                    "operator_timing": 0.00001275,
+                                    "result_set_size": 240,
+                                    "children": [
+                                        {
+                                            "operator_type": "TABLE_SCAN",
+                                            "cpu_time": 0.000038633999999999996,
+                                            "extra_info": {
+                                                "Text": "date",
+                                                "Projections": "datekey",
+                                                "Filters": [
+                                                    "weeknuminyear=6 AND weeknuminyear IS NOT NULL",
+                                                    "year=1994 AND year IS NOT NULL"
+                                                ],
+                                                "Estimated Cardinality": "197"
+                                            },
+                                            "operator_rows_scanned": 2556,
+                                            "operator_cardinality": 30,
+                                            "operator_timing": 0.000038633999999999996,
+                                            "result_set_size": 240,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
