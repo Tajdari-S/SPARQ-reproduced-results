@@ -35,7 +35,7 @@ DuckDB with `numactl --cpunodebind=0 --membind=0` and kept 112 threads.
 DuckDB time in ms ([`results/fig7_free.csv`](results/fig7_free.csv)). SPARQ times
 are from DRAMsim3 and unchanged.
 
-| join | SPARQ | DuckDB published | DuckDB unpinned | runs | SPARQ speedup, published | SPARQ speedup, unpinned |
+| join | SPARQ | DuckDB Pinned | DuckDB unpinned | runs | SPARQ speedup, Pinned | SPARQ speedup, unpinned |
 |---|--:|--:|--:|---|--:|--:|
 | customer SF1 | 0.744 | 328 | 414 | 423, 404, 414 | 441× | 556× |
 | customer SF10 | 8.47 | 4,726 | 1,791 | 1,768, 1,791, 1,795 | 558× | 211× |
@@ -47,7 +47,7 @@ are from DRAMsim3 and unchanged.
 | supplier SF10 | 9.33 | 4,274 | 1,432 | 1,410, 1,432, 1,439 | 458× | 153× |
 | supplier SF100 | 101.4 | 51,596 | 15,247 | 15,276, 15,218 | 509× | 150× |
 
-With DuckDB unpinned, SF1 is 1.1–1.3× slower than published, and SF10/SF100 are
+With DuckDB unpinned, SF1 is 1.1–1.3× slower than Pinned, and SF10/SF100 are
 2.6–3.4× faster.
 
 ## Why pinning matters
