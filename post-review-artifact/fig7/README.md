@@ -4,7 +4,7 @@ Figure 7's DuckDB series re-measured with **no `numactl`**: both sockets and
 DuckDB's default 112 threads, the same setup as Figure 11's DuckDB bars. The
 SPARQ and C++ series are unchanged.
 
-| | published | unpinned |
+| | Pinned | unpinned |
 |---|---:|---:|
 | SPARQ speedup over DuckDB | 312–620×, geomean 469× | **150–556×, geomean 239×** |
 | DuckDB speedup over C++ | 28–51× | **30–113×** |
